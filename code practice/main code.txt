@@ -1,0 +1,17 @@
+this is my original code base 
+
+DFT matlab code
+
+clc;
+clear all;
+close all;
+x=input('enter the sequence');
+N=length(x)
+FOR k=1:N;
+    X= 0;
+    FOR n=1:N 
+        X=X+x(n).*exp(-1i*2*pi*(k-1)*(n-1)/N);
+    END
+    X1(k)=X;
+END
+ 
