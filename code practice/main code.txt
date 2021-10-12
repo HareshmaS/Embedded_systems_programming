@@ -13,5 +13,15 @@ FOR k=1:N;
         X=X+x(n).*exp(-1i*2*pi*(k-1)*(n-1)/N);
     END
     X1(k)=X;
-END
- 
+END 
+disp(X)
+% adding the error equation and also code for plotting is added to the program
+
+X2=fft(x);
+e=X1-X2
+[th,r]=cart2pol(real(X1),imag(X1))
+n=0:3;
+figure(1)
+plot(n,r)
+figure(2)
+stem(n,th)
